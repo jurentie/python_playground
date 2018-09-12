@@ -1,14 +1,19 @@
 #A simple project that finds duplicate music tracks
-#in iTunes plalist files and plots various 
+#in iTunes playlist files and plots various 
 #statistics such as track lengths and ratings.
 
 
 import sys
+import matplotlib
+import os
+import plistlib
 verbose = False
 
 def findDuplicates(filename):
 	if(verbose):
 		print('Finding duplicate tracks in %s...' % filename)
+	# read in a playlist
+	plist = plistlib.readPlist(filename)
 
 
 def main():
